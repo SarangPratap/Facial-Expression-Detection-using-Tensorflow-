@@ -127,8 +127,8 @@ objects = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
 y_pos = np.arange(len(objects))
 print(y_pos)
     
-test_image=image.load_img('shikha.jpg',grayscale=True,target_size=(48,48)) #target size must be equal to input size
-show_img=image.load_img('shikha.jpg', grayscale=False, target_size=(200, 200))
+test_image=image.load_img('img.jpg',grayscale=True,target_size=(48,48)) #target size must be equal to input size
+show_img=image.load_img('img.jpg', grayscale=False, target_size=(200, 200))
 test_image = image.img_to_array(test_image)
 test_image=np.expand_dims(test_image,axis=0)
     #test_image /= 255
@@ -139,7 +139,7 @@ plt.imshow(show_img)
 plt.show()
 
 
-m=0.000000000000000000001
+m=float('-inf')
 a=result[0]
 for i in range(0,len(a)):
     if (a[i]>m):
