@@ -167,7 +167,7 @@ while(True):
         normalized=resized/255.0
         reshaped=np.reshape(normalized,(1,48,48,1)) #cnn takes 4d input
         result=model.predict(reshaped)
-        m=0.000000000000000000001
+        m=float('-inf')
         a=result[0]
         for i in range(0,len(a)):
             if a[i]>m:
