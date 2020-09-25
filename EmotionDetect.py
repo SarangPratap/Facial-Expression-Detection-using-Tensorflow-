@@ -103,7 +103,7 @@ def mymodel():
         cnn.add(BatchNormalization())
         cnn.add(Dropout(0.2))
         cnn.add(Dense(7))  #7 output so 7 neurons 
-        cnn.add(Activation('softmax'))  # multiclass classidication activation function
+        cnn.add(Activation('softmax'))  # multiclass classification activation function
         
         cnn.compile(loss='categorical_crossentropy', metrics=['accuracy'],optimizer='adam')
         return cnn
